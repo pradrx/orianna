@@ -1,0 +1,47 @@
+#pragma once
+
+#include <cstdint>
+
+enum ranks {
+    RANK_1,
+    RANK_2,
+    RANK_3,
+    RANK_4,
+    RANK_5,
+    RANK_6,
+    RANK_7,
+    RANK_8,
+};
+
+constexpr uint64_t CLEAR_RANK[]{
+    0xFFFFFFFFFFFFFF00,
+    0xFFFFFFFFFFFF00FF,
+    0xFFFFFFFFFF00FFFF,
+    0xFFFFFFFF00FFFFFF,
+    0xFFFFFF00FFFFFFFF,
+    0xFFFF00FFFFFFFFFF,
+    0xFF00FFFFFFFFFFFF,
+    0x00FFFFFFFFFFFFFF,
+};
+
+enum files {
+    FILE_A,
+    FILE_B,
+    FILE_C,
+    FILE_D,
+    FILE_E,
+    FILE_F,
+    FILE_G,
+    FILE_H,
+};
+
+constexpr uint64_t CLEAR_FILE[]{
+    0xFEFEFEFEFEFEFEFE,
+    0xFDFDFDFDFDFDFDFD,
+    0xFBFBFBFBFBFBFBFB,
+    0xF7F7F7F7F7F7F7F7,
+    0xEFEFEFEFEFEFEFEF,
+    0xDFDFDFDFDFDFDFDF,
+    0xBFBFBFBFBFBFBFBF,
+    0x7F7F7F7F7F7F7F7F,
+};
