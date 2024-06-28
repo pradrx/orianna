@@ -62,6 +62,9 @@ class Board {
         Bitboard all_black_pieces;
         Bitboard all_pieces;
 
+        // access with enumSquare, bitboard represents the moves for the piece on that index
+        Bitboard moves[64];
+
         /*** constructors ***/
 
         Board();
