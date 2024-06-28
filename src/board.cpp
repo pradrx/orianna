@@ -21,3 +21,8 @@ Board::Board() {
     all_black_pieces = black_pawns | black_knights | black_bishops | black_rooks | black_queens | black_king;
     all_pieces = all_white_pieces | all_black_pieces;
 }
+
+Board::compute_knight_moves() {
+
+}
+
