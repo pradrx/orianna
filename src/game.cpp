@@ -19,6 +19,7 @@ Game::Game() {
  */
 
 
+
 // This method is terrible but its just for debugging and doesn't affect compute very much
 // even if we choose to visualize it (around 500 or so comparisons in worst case each ply).
 void Game::print_board() {
@@ -58,3 +59,4 @@ void Game::print_board() {
         std::cout << "\n";
     }
 }
+

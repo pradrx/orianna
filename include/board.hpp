@@ -63,7 +63,7 @@ class Board {
         Bitboard all_pieces;
 
         // access with enumSquare, bitboard represents the moves for the piece on that index
-        Bitboard moves[64];
+        Bitboard movesets[64];
 
         /*** constructors ***/
 
@@ -72,4 +72,6 @@ class Board {
         /*** methods ***/
 
         Bitboard compute_knight_moves(Bitboard knight, Bitboard side);
+        void user_make_move();
+        void after_move();
 };
