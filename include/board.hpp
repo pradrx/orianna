@@ -25,11 +25,11 @@
  * 07 06 05 04 03 02 01 00
  */
 
+typedef uint64_t Bitboard;
+
 class Board {
     public:
         /*** aliases and enums ***/
-
-        typedef uint64_t Bitboard;
 
         enum enumSquare {
             A1, B1, C1, D1, E1, F1, G1, H1,
@@ -70,4 +70,6 @@ class Board {
         Board();
 
         /*** methods ***/
+
+        Bitboard compute_knight_moves(Bitboard knight, Bitboard side);
 };

@@ -1,4 +1,5 @@
 #include "board.hpp"
+#include "lookup_tables.hpp"
 
 Board::Board() {
     // lsb -> msb: a1 b1 c1 ... h1 a2 b2 ...
@@ -22,7 +23,26 @@ Board::Board() {
     all_pieces = all_white_pieces | all_black_pieces;
 }
 
-Board::compute_knight_moves() {
+Bitboard Board::compute_knight_moves(Bitboard knight, Bitboard side) {
+    // mask out A going to A - 1
+    Bitboard p1 = (knight & MASK_FILE[FILE_A]) << 15;
+    Bitboard p2 = (knight & MASK_FILE[FILE_A]) >> 17;
 
+    // mask out H going to H + 1
+    Bitboard p3 = (knight & MASK_FILE[FILE_H]) << 17;
+    Bitboard p4 = (knight & MASK_FILE[FILE_H]) >> 15;
+
+    // mask out B going to B - 2 and A going to A - 2
+    Bitboard p5 = (knight & MASK_FILE[FILE_A] & MASK_FILE[FILE_B]) << 6;
+    Bitboard p6 = (knight & MASK_FILE[FILE_A] & MASK_FILE[FILE_B]) >> 10;
+
+    // mask out G going to G + 2 and H going to H + 2
+    Bitboard p7 = (knight & MASK_FILE[FILE_G] & MASK_FILE[FILE_H]) << 10;
+    Bitboard p8 = (knight & MASK_FILE[FILE_G] & MASK_FILE[FILE_H]) >> 6;
+
+    Bitboard moves = p1 | p2 | p3 | p4 | p5 | p6 | p7 | p8;
+    
+    // remove moves that land on your own sides pieces
+    return moves & ~side;
 }
 
