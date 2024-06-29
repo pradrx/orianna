@@ -72,6 +72,8 @@ class Board {
         /*** methods ***/
 
         Bitboard compute_knight_moves(Bitboard knight, Bitboard side);
+        void compute_movesets();
         void user_make_move();
         void after_move();
+        void print_bitboard(Bitboard board);
 };

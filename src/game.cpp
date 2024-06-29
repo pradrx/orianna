@@ -3,9 +3,7 @@
 #include <iostream>
 #include <string>
 
-Game::Game() {
-    board = Board();
-}
+Game::Game() {}
 
 /**
  * 56 57 58 59 60 61 62 63
