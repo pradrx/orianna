@@ -1,18 +1,23 @@
 #pragma once
 
 #include "board.hpp"
+#include "move.hpp"
 
-class Game {
-    public:
-        /*** member variables ***/
+#include <string>
 
-        Board board;
+class Game
+{
+public:
+    /*** member variables ***/
 
-        /*** constructors ***/
+    Board board;
 
-        Game();
+    /*** constructors ***/
 
-        /*** methods ***/
+    Game();
 
-        void print_board();
+    /*** methods ***/
+
+    void print_board();
+    Move parse_input(std::string move);
 };
