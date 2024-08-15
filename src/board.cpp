@@ -128,3 +128,12 @@ Bitboard Board::compute_knight_moves(Bitboard knight, Bitboard side)
     // remove moves that land on your own sides pieces
     return moves & ~side;
 }
+
+Bitboard Board::compute_straight_ray_moves(Bitboard piece, Bitboard side) {
+    return (uint64_t) 0u;
+}
+
+Bitboard Board::compute_diagonal_ray_moves(Bitboard piece, Bitboard side) {
+    return (uint64_t) 0u;
+}
+

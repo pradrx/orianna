@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/prad/Documents/projects/orianna",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prad/Documents/projects/orianna/include -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/orianna.dir/src/main.cpp.o -c /Users/prad/Documents/projects/orianna/src/main.cpp",
+  "file": "/Users/prad/Documents/projects/orianna/src/main.cpp",
+  "output": "CMakeFiles/orianna.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/prad/Documents/projects/orianna",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prad/Documents/projects/orianna/include -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/orianna.dir/src/board.cpp.o -c /Users/prad/Documents/projects/orianna/src/board.cpp",
+  "file": "/Users/prad/Documents/projects/orianna/src/board.cpp",
+  "output": "CMakeFiles/orianna.dir/src/board.cpp.o"
+},
+{
+  "directory": "/Users/prad/Documents/projects/orianna",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/prad/Documents/projects/orianna/include -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -o CMakeFiles/orianna.dir/src/game.cpp.o -c /Users/prad/Documents/projects/orianna/src/game.cpp",
+  "file": "/Users/prad/Documents/projects/orianna/src/game.cpp",
+  "output": "CMakeFiles/orianna.dir/src/game.cpp.o"
+}
+]
